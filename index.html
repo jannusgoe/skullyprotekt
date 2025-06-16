@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skullyprotekt - Transportschutz für Jagdtrophäen</title>
+    <meta name="description" content="Unser Transportschutz Skullyprotekt wurde speziell entwickelt, Ihre Rothirsch-Trophäen mühelos und sicher zu transportieren.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon (vom alten Server) -->
+    <link rel="icon" type="image/x-icon" href="assets/site_favicon_16_1689688590033.ico"/>
+
+    <script>
+        // Konfiguration für Tailwind CSS, um die Farben und Schriftarten der Seite zu definieren
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': 'rgb(0 77 42)',
+                        'gold': 'rgb(190 167 119)',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'philosopher': ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Zusätzliche globale Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff; /* Hintergrund der Seite, falls das BG-Bild nicht lädt */
+            color: #3c3334;
+        }
+        .bg-hero {
+            background-image: url('assets/slider-04b-1920w.jpg');
+        }
+        .bg-pattern {
+            background-image: url('assets/verzierung-bg-square-9715h.jpg');
+            background-attachment: fixed;
+        }
+        .aspect-video-container {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* Dies erzeugt ein 16:9 Seitenverhältnis (9 / 16 = 0.5625) */
+        }
+        .aspect-video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Stellt sicher, dass das ganze Video sichtbar ist, mit schwarzen Balken */
+        }
+    </style>
+</head>
+<body class="bg-gold">
+
+    <!-- Header -->
+    <header class="bg-dark-green text-white py-4 px-6 md:px-10 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="w-20">
+                <img src="assets/Skullyprotekt-Logo-negativ-187h.png" alt="Skullyprotekt Logo">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8 items-center text-lg">
+                <a href="#skullyprotekt" class="hover:text-gold transition-colors">Skullyprotekt</a>
+                <a href="#anleitung" class="hover:text-gold transition-colors">Anleitung</a>
+                <a href="#shop" class="hover:text-gold transition-colors">Bestellen</a>
+                <a href="#ueber-uns" class="hover:text-gold transition-colors">Über uns</a>
+                <a href="#kontakt" class="hover:text-gold transition-colors">Kontakt</a>
+            </nav>
+
+            <!-- Mobile Navigation Trigger -->
+            <button id="menu-button" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Sheet (ausgeblendet) -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-50 hidden"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-2/3 max-w-sm bg-dark-green text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-6 flex flex-col h-full">
+            <div class="flex justify-between items-center mb-10">
+                <span class="text-xl font-philosopher">Menü</span>
+                <button id="close-menu-button" class="p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-xl">
+                <a href="#skullyprotekt" class="nav-link hover:text-gold transition-colors">Skullyprotekt</a>
+                <a href="#anleitung" class="nav-link hover:text-gold transition-colors">Anleitung</a>
+                <a href="#shop" class="hover:text-gold transition-colors">Bestellen</a>
+                <a href="#ueber-uns" class="nav-link hover:text-gold transition-colors">Über uns</a>
+                <a href="#kontakt" class="nav-link hover:text-gold transition-colors">Kontakt</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="h-screen bg-hero bg-cover bg-center flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="text-center text-white z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold font-philosopher uppercase tracking-wider">Skullyprotekt</h1>
+                <h3 class="text-2xl md:text-3xl font-philosopher text-gold mt-4">Transportschutz für Jagdtrophäen</h3>
+            </div>
+            <a href="#skullyprotekt" class="absolute bottom-10 z-10 text-white animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
+        </section>
+
+        <!-- Über Skullyprotekt Section -->
+        <section id="skullyprotekt" class="py-20 px-6 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-philosopher mb-12">Über Skullyprotekt</h2>
+                <p class="max-w-3xl mx-auto text-lg leading-relaxed mb-10">
+                    Unser Transportschutz Skullyprotekt für wurde speziell entwickelt, damit Sie Ihre Rothirsch-Trophäen mühelos, umweltfreundlich und sicher transportieren können. Mit einem stabilen und umweltfreundlichen Karton umschließt Skullyprotekt den Schädel und sorgt so dafür, dass jede Trophäe sicher, würdig und unbeschädigt den Weg nach Hause findet.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+                    <!-- Video 1 in einem 16:9 Container -->
+                    <div class="aspect-video-container rounded-lg shadow-xl overflow-hidden bg-black">
+                        <video src="assets/fezEKakwQ4SSnAsiPdj4_Video-Kofferraum-v.mp4" controls>
+                            Ihr Browser unterstützt das Video-Tag nicht.
+                        </video>
+                    </div>
+                    
+                    <!-- Video 2 in einem 16:9 Container -->
+                    <div class="aspect-video-container rounded-lg shadow-xl overflow-hidden bg-black">
+                        <video src="assets/n4hr1HQqRNOYdxczXAPN_Video-Rueckbank-v.mp4" controls>
+                            Ihr Browser unterstützt das Video-Tag nicht.
+                        </video>
+                    </div>
+                </div>
+                <div class="max-w-3xl mx-auto text-left space-y-4">
+                    <p><strong class="text-dark-green">Schutz vor Bruch und Schäden:</strong> Spitze Schädelteile und scharfe Zähne können keinen Schaden mehr anrichten.</p>
+                    <p><strong class="text-dark-green">Vereinfachter Umgang:</strong> Ihre Trophäe kann sorgloser verstaut sowie sicherer und einfacher transportiert werden.</p>
+                    <p><strong class="text-dark-green">Mehrfach verwendbar:</strong> Skullyprotekt passt mit 55 x 40 cm problemlos in den Reisekoffer.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Anleitung Section -->
+        <section id="anleitung" class="py-20 px-6 bg-pattern">
+             <div class="container mx-auto text-center bg-white/90 p-10 rounded-lg shadow-2xl">
+                <h2 class="text-4xl md:text-5xl font-philosopher mb-12">Gebrauchsanleitung</h2>
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 text-left">
+                        <img src="assets/howto-07-480w.jpg" alt="Anleitung Schritt 1" class="w-full md:w-1/4 rounded-lg shadow-lg">
+                        <p class="md:w-3/4 text-lg">Nehmen Sie die zwei kleineren weißen Kappen und stülpen Sie diese auf die Knochenvorsprünge an der Unterseite des Schädels. Die übrigen Kappen setzen Sie auf die Geweihenden.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 text-left">
+                        <img src="assets/howto-06-480w.jpg" alt="Anleitung Schritt 2" class="w-full md:w-1/4 rounded-lg shadow-lg">
+                        <p class="md:w-3/4 text-lg">Breiten Sie den Skullyprotekt aus. Setzen Sie den Hirsch mit dem Schädel mittig auf die Bodenplatte, sodass die Zähne auf den vorbereiteten Klettauflagen liegen.</p>
+                    </div>
+                     <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 text-left">
+                        <img src="assets/howto-03b-480w.jpg" alt="Anleitung Schritt 3" class="w-full md:w-1/4 rounded-lg shadow-lg">
+                        <p class="md:w-3/4 text-lg">Klappen Sie zuerst den linken Seitenteil über den Nasenrücken des Schädels auf die rechte Seite, sodass der Nasenrücken ganz umschlossen ist.</p>
+                    </div>
+                </div>
+                <div class="aspect-video-container max-w-3xl mx-auto mt-12 rounded-lg shadow-xl overflow-hidden bg-black">
+                    <video src="assets/5yEI5LTKSCqyrAYXEDU8_Video-Verpacken-v.mp4" controls>
+                        Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                </div>
+                <a href="assets/files/uploaded/Skullyprotekt_BdaRL14.pdf" target="_blank" class="inline-block mt-8 bg-dark-green text-white font-bold py-3 px-8 rounded-lg hover:bg-dark-green/90 transition-colors shadow-lg">Anleitung herunterladen (PDF)</a>
+            </div>
+        </section>
+
+        <!-- Shop CTA Section -->
+        <section id="shop" class="py-20 px-6 bg-white text-center">
+            <h2 class="text-4xl md:text-5xl font-philosopher mb-6">Bestellen</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Für Bestellungen oder Anfragen schreiben Sie uns bitte eine E-Mail. Wir melden uns umgehend bei Ihnen.
+            </p>
+            
+            <a href="mailto:kontakt@skullyprotekt.de?subject=Bestellung%20Skullyprotekt&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20m%C3%B6chte%20gerne%20folgende%20Anzahl%20an%20Skullyprotekt%20bestellen%3A%0A%0AAnzahl%3A%20%5BHier%20Anzahl%20einf%C3%BCgen%5D%0A%0AMeine%20Lieferadresse%3A%0A%5BHier%20Ihren%20Namen%20und%20Adresse%20eintragen%5D%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%2C%0A"
+               class="inline-block bg-dark-green text-white font-bold py-3 px-10 rounded-lg hover:bg-dark-green/90 transition-colors shadow-lg text-lg">
+                Bestellen
+            </a>
+        </section>
+
+        <!-- Über Uns Section -->
+        <section id="ueber-uns" class="py-20 px-6 bg-pattern">
+            <div class="container mx-auto bg-white/90 p-10 rounded-lg shadow-2xl">
+                <h2 class="text-4xl md:text-5xl font-philosopher mb-12 text-center">Über Uns</h2>
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="md:w-1/3">
+                        <img src="assets/ueber-uns-459h.png" alt="Thilo Wessely" class="rounded-lg shadow-xl mx-auto">
+                    </div>
+                    <div class="md:w-2/3 text-lg leading-relaxed space-y-4">
+                        <p class="font-bold">Herzlich willkommen auf der Internetseite Skullyprotekt!</p>
+                        <p>Mein Name ist Thilo Wessely, ich bin der Initiator dieser Seite und Erfinder des Produkts.</p>
+                        <p>Dieses unbefriedigende Erlebnis beim Trophäentransport war der Ansporn für mich, eine bessere und regelmäßig einsetzbare Lösung zu finden. So entstand Skullyprotekt – der praktische Schutz für einen vereinfachten und jadgerechten Trophäentransport.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer id="kontakt" class="bg-dark-green text-white pt-16 pb-8 px-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
+            <!-- Logo -->
+            <div class="flex justify-center md:justify-start">
+                 <img src="assets/Skullyprotekt-Logo-negativ-small-219w.png" alt="Skullyprotekt Logo" class="h-24">
+            </div>
+            
+            <!-- Adresse -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 font-philosopher">Adresse</h4>
+                <p>Thilo Wessely Sportartikel GmbH</p>
+                <p>Bergstr. 56</p>
+                <p>44791 Bochum</p>
+            </div>
+
+            <!-- Kontakt -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 font-philosopher">Kontakt</h4>
+                <div class="space-y-2">
+                    <p>
+                        <a href="tel:+4915144911843" class="hover:text-gold transition-colors">+49 151 449 11 843</a>
+                    </p>
+                    <p>
+                        <a href="mailto:kontakt@skullyprotekt.de" class="hover:text-gold transition-colors">kontakt@skullyprotekt.de</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Rechtliches -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 font-philosopher">Rechtliches</h4>
+                <div class="space-y-2">
+                    <!-- Erstelle diese Seiten als separate HTML-Dateien im selben Repository -->
+                    <p><a href="impressum.html" class="hover:text-gold transition-colors">Impressum</a></p>
+                    <p><a href="datenschutz.html" class="hover:text-gold transition-colors">Datenschutz</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto text-center text-sm text-white/70 mt-12 border-t border-white/20 pt-6">
+            © 2024 Thilo Wessely Sportartikel GmbH. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+
+    <script>
+        // JavaScript für das mobile Menü
+        const menuButton = document.getElementById('menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            overlay.classList.add('hidden');
+        }
+
+        menuButton.addEventListener('click', openMenu);
+        closeMenuButton.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        
+        // Menü schließen, wenn ein Link geklickt wird
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+    </script>
+</body>
+</html>

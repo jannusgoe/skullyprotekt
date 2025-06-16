@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz - Skullyprotekt</title>
+    
+    <!-- Tailwind CSS mit Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/site_favicon_16_1689688590033.ico"/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': 'rgb(0 77 42)',
+                        'gold': 'rgb(190 167 119)',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'philosopher': ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Eigene Anpassungen für die Prose-Klasse */
+        .prose h1, .prose h2 {
+            font-family: 'Philosopher', serif;
+            color: rgb(0 77 42);
+        }
+        .prose a {
+            color: rgb(0 77 42);
+            text-decoration: underline;
+        }
+        .prose a:hover {
+            color: rgb(190 167 119);
+        }
+        .prose strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-dark-green text-white py-4 px-6 md:px-10 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="w-20">
+                <!-- Ersetze dies durch den lokalen Pfad, sobald du das Logo heruntergeladen hast -->
+                <img src="assets/Skullyprotekt-Logo-negativ-187h.png" alt="Skullyprotekt Logo">
+            </a>
+            <a href="index.html" class="border border-white px-4 py-2 rounded-md hover:bg-white hover:text-dark-green transition-colors">Zurück zur Startseite</a>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-20 px-6">
+        <div class="container mx-auto max-w-4xl bg-white p-8 md:p-12 rounded-lg shadow-xl">
+            <article class="prose lg:prose-lg max-w-none">
+                <h1>Datenschutzerklärung</h1>
+                <p>Wir nehmen als Betreiber dieser Webseite den Schutz Ihrer personenbezogenen Daten sehr ernst, behandeln diese vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+
+                <h2>1. Verantwortlicher</h2>
+                <p>
+                    Thilo Wessely Sportartikel GmbH<br>
+                    Bergstr. 56<br>
+                    44791 Bochum<br>
+                    E-Mail: kontakt@skullyprotekt.de
+                </p>
+
+                <h2>2. Hosting und Server-Logfiles</h2>
+                <p>Unsere Website wird bei GitHub Pages gehostet. Der Anbieter ist GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Beim Besuch unserer Website erfasst GitHub automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser übermittelt. Dies sind:</p>
+                <ul>
+                    <li>Browsertyp und Browserversion</li>
+                    <li>verwendetes Betriebssystem</li>
+                    <li>Referrer URL (die zuvor besuchte Seite)</li>
+                    <li>Hostname des zugreifenden Rechners</li>
+                    <li>Uhrzeit der Serveranfrage</li>
+                    <li>Ihre IP-Adresse</li>
+                </ul>
+                <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung unserer Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
+                
+                <h2>3. Kontaktaufnahme per E-Mail</h2>
+                <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben aus der E-Mail inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+                <h2>4. Ihre Rechte als betroffene Person</h2>
+                <p>Ihnen stehen bezüglich Ihrer personenbezogenen Daten folgende Rechte zu:</p>
+                <ul>
+                    <li>Recht auf Auskunft</li>
+                    <li>Recht auf Berichtigung oder Löschung</li>
+                    <li>Recht auf Einschränkung der Verarbeitung</li>
+                    <li>Recht auf Widerspruch gegen die Verarbeitung</li>
+                    <li>Recht auf Datenübertragbarkeit</li>
+                </ul>
+                <p>Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren.</p>
+                <p><br>Stand: Juni 2024</p>
+            </article>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark-green text-white py-8 px-6">
+        <div class="container mx-auto text-center text-sm text-white/70">
+            © 2024 Thilo Wessely Sportartikel GmbH. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+</body>
+</html>
